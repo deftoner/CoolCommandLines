@@ -1,3 +1,4 @@
 # Description: For compliance auditing, or just to find unsafe (http) links, 404 links, etc, using linkchecker. 
 # Explanation: This command will crawl the URL staying on same domain/path and will print links on those pages that goes to http only, and also the 404 links, ignoring javascripts links and others. 
+# This will also check the links outside the scope (just to check if they are valid) and will print if the link reddirects to http too.
 linkchecker --check-extern --no-status --verbose https://www.yourwebsite.com/path/index.htm 2>&1 | grep -C 2 -E 'http://|404 Not Found'#
